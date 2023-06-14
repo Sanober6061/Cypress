@@ -1,0 +1,91 @@
+{
+  "stats": {
+    "suites": 0,
+    "tests": 1,
+    "passes": 0,
+    "pending": 0,
+    "failures": 1,
+    "start": "2023-06-14T08:14:34.611Z",
+    "end": "2023-06-14T08:14:49.797Z",
+    "duration": 15186,
+    "testsRegistered": 1,
+    "passPercent": 0,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "a6f1e1f6-71ab-45c5-8aef-0c577bfbfd9c",
+      "title": "",
+      "fullFile": "cypress/e2e/login.cy.js",
+      "file": "cypress/e2e/login.cy.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [
+        {
+          "title": "FB login page ",
+          "fullTitle": "FB login page ",
+          "timedOut": null,
+          "duration": 12458,
+          "state": "failed",
+          "speed": null,
+          "pass": false,
+          "fail": true,
+          "pending": false,
+          "context": null,
+          "code": "cy.visit('https://www.facebook.com/');\ncy.get(':nth-child(2) > ._sv4').click();\ncy.get('[data-testid=\"open-registration-form-button\"]').click();\nsignup.Enterfirstname('sanober');\nsignup.Enterlastname('Rafique');\nsignup.Enteremail('sanoberrafique49@gmail.com');\nsignup.Enterconfirmemail('sanoberrafique49@gmail.com');\nsignup.EnterPassword('sanober123*');\nsignup.SelectDay('14');\nsignup.SelectMonth('Oct');\nsignup.SelectYear('1998');\nsignup.Checkgender('1');\nsignup.Clicksignup();\n//  signup.Enterlastname()\n//  signup.Enteremail()\n//  signup.Enterconfirmemail()\n//\n// cy.get('input[name=\"firstname\"]').type('sanober')\n// cy.get('input[name=\"lastname\"]').type('rafique')\n// cy.get('input[name=\"reg_email__\"]').type('sanoberrafique49@gmail.com')\n// cy.get('input[name=\"reg_email_confirmation__\"]').type('sanoberrafique49@gmail.com')\n// cy.get('input[name=\"reg_passwd__\"]').type('Sanober123*')\n// cy.get(\"#day\").select('14')\n// cy.get(\"#month\").select('Oct')\n// cy.get(\"#year\").select('1998')\n// cy.get('[type=\"radio\"]').check('1')\n// cy.get(\"#u_3_s_05\").submit()//\n// it('fb signup', () => {\n//     cy.visit ('https://www.facebook.com/')\n//     cy.get(':nth-child(2) > ._sv4').click()\n//     cy.get('.signup_box_content > ._42ft').click()",
+          "err": {
+            "message": "AssertionError: Timed out retrying after 4000ms: Expected to find element: `#u_2_s_n9`, but never found it.",
+            "estack": "AssertionError: Timed out retrying after 4000ms: Expected to find element: `#u_2_s_n9`, but never found it.\n    at sign_up.Clicksignup (webpack:///./cypress/e2e/pages/signup page.js:62:11)\n    at Context.eval (webpack:///./cypress/e2e/login.cy.js:20:12)",
+            "diff": null
+          },
+          "uuid": "8b270e30-4cea-454b-b547-00ac9a147523",
+          "parentUUID": "a6f1e1f6-71ab-45c5-8aef-0c577bfbfd9c",
+          "isHook": false,
+          "skipped": false
+        }
+      ],
+      "suites": [],
+      "passes": [],
+      "failures": [
+        "8b270e30-4cea-454b-b547-00ac9a147523"
+      ],
+      "pending": [],
+      "skipped": [],
+      "duration": 12458,
+      "root": true,
+      "rootEmpty": false,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.0.1"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "mochawesome",
+        "saveHtml": false,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "7.1.3"
+    },
+    "marge": {
+      "options": {
+        "charts": true,
+        "overwrite": false,
+        "html": false,
+        "json": true,
+        "reportDir": "cypress/report"
+      },
+      "version": "6.2.0"
+    }
+  }
+}
